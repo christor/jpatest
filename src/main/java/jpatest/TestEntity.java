@@ -21,6 +21,8 @@ public class TestEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String _id;
 
+    private String textMessage;
+    
     public String getId() {
         return _id;
     }
@@ -52,6 +54,14 @@ public class TestEntity implements Serializable {
     @Override
     public String toString() {
         return "com.xsb.jpatest.TestEntity[ id=" + _id + " ]";
+    }
+
+    public String getTextMessage() {
+        return textMessage;
+    }
+
+    public void setTextMessage(String textMessage) {
+        this.textMessage = textMessage;
     }
     
 }

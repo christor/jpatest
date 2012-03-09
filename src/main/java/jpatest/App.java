@@ -17,10 +17,9 @@ public class App {
         TestEntity testEntity = new TestEntity();
 
         em.getTransaction().begin();
-        testEntity = em.merge(testEntity);
+        em.persist(testEntity);
         em.flush();
-        testEntity = em.merge(testEntity);
-        em.flush();
+        testEntity.setTextMessage("SOME TEXT MESSAGE");
         em.getTransaction().commit();
         System.err.println("ok");
     }
