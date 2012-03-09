@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <!-- Tutorial "unit" -->
+  <persistence-unit name="Test" transaction-type="RESOURCE_LOCAL">
+    <provider>org.datanucleus.api.jpa.PersistenceProviderImpl</provider>
+    <class>jpatest.TestEntity</class>
+    <properties>
+      <property name="datanucleus.ConnectionURL" value="mongodb:localhost/test"/>
+      <property name="datanucleus.storeManagerType" value="mongodb"/>
+      <property name="datanucleus.autoCreateSchema" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
